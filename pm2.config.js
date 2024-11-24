@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	name: 'app', // Name of your application
 	script: 'src/index.ts', // Entry point of your application
 	interpreter: 'bun', // Bun interpreter
