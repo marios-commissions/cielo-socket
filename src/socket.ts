@@ -1,4 +1,3 @@
-import { setTimeout } from 'node:timers/promises';
 import WebSocket from 'ws';
 
 import { notify } from './api';
@@ -49,8 +48,7 @@ export function createWebSocket() {
 	});
 
 	socket.on('close', async () => {
-		console.log(`WebSocket closed. Attempting reconnect in 5000ms`);
-		await setTimeout(5000);
+		console.log(`WebSocket closed. Attempting reconnect.`);
 		createWebSocket();
 	});
 }
